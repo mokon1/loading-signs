@@ -1,0 +1,8 @@
+@mixin loading{
+    width:40vw;
+    height: 40vh;
+    margin: 30vh auto;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
