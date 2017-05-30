@@ -1,3 +1,4 @@
+//used in 1,2,3,4
 @mixin loading{
     width:40vw;
     height: 40vh;
@@ -5,4 +6,12 @@
     display: flex;
     justify-content: center;
     position: absolute;
+}
+//used in 3.loading_rectangles
+@mixin style_rectangle{
+    width: 20px;
+    height: 50px;
+    background-color: pink;
+    margin-left: 5%;
+    float: left;
 }
