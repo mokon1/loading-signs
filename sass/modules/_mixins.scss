@@ -15,3 +15,7 @@
     margin-left: 5%;
     float: left;
 }
+//used in 6.loading_text
+@mixin text_animation($time){
+    animation: loading_text_animation 2s $time infinite alternate;
+}
