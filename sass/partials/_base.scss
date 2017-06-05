@@ -5,6 +5,7 @@ body{
     background-color: black; 
     margin:0;
     padding: 0;
+    color: white;
 }
 .container{
     width:80vw;
@@ -23,4 +24,15 @@ body{
         top: 50px;
     }
 }
-/* menu ? */ //toDo
+/* MENU */
+form{
+    width:80vw;
+    height: 90vh;
+    padding-left: 30vw;
+    padding-top: 30vh;
+    z-index: 1;
+    label{
+        margin: 25px;
+        display: block;
+    }
+}

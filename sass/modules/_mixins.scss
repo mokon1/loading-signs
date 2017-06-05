@@ -1,7 +1,7 @@
 //used in 1,2,3,4
 @mixin loading{
     width:40vw;
-    height: 40vh;
+    height: 30vh;
     margin: 30vh auto;
     display: flex;
     justify-content: center;
@@ -11,7 +11,7 @@
 @mixin style_rectangle{
     width: 20px;
     height: 50px;
-    background-color: pink;
+    background-color: black;
     margin-left: 5%;
     float: left;
 }
