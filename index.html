@@ -7,26 +7,26 @@
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>
     <link rel ="stylesheet" href="css/main.css" type="text/css">
-    <!-- <script src="script.js"></script>  to create script.js -->
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Loading signs</h1>
         <p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. </p>
          <!-- 1.jumping_dots -->
-        <div class="jumping_dots">
+        <div class="jumping_dots_container">
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
         </div>
         <!-- 2.pulsing_dots -->
-        <div class="pulsing_dots">
+        <div class="pulsing_dots_container">
             <div class="dot2"></div>
             <div class="dot2"></div>
             <div class="dot2"></div>
         </div>
         <!-- 3.loading_rectangles -->
-        <div class="loading_rectangles">
+        <div class="loading_rectangles_container">
             <div class="rectangle"></div>
             <div class="rectangle"></div>
             <div class="rectangle"></div>
@@ -59,9 +59,15 @@
             <span id="letter9">. </span>
             <span id="letter10">. </span>
         </div>
-        
-        <!-- to do menu ? -->
-        
+        <!-- MENU-->
+        <form>
+            <label><input type="radio" name="radio" class="option1">jumping dots</label>
+            <label><input type="radio" name="radio" class="option2">pulsing dots</label>
+            <label><input type="radio" name="radio" class="option3">loading rectangles</label>
+            <label><input type="radio" name="radio" class="option4">loading circles</label>
+            <label><input type="radio" name="radio" class="option5">loading figures</label>
+            <label><input type="radio" name="radio" class="option6">loading text</label>
+        </form> 
     </div>
 </body>
 </html>			
