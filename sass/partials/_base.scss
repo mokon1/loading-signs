@@ -10,7 +10,6 @@ body{
 .container{
     width:80vw;
     height: 100vh;
-    //border: 5px solid blue;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -22,15 +21,17 @@ body{
         color:white;
         position: absolute;
         top: 50px;
+        font-size: 20px;
     }
 }
-/* MENU */
+/* LIST */
 form{
     width:80vw;
     height: 90vh;
     padding-left: 30vw;
     padding-top: 30vh;
     z-index: 1;
+    color: white;
     label{
         margin: 25px;
         display: block;

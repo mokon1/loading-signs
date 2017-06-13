@@ -1,5 +1,4 @@
-//used in 1,2,3,4
-@mixin loading{
+@mixin settingsOfContainer{
     width:40vw;
     height: 30vh;
     margin: 30vh auto;
@@ -7,15 +6,119 @@
     justify-content: center;
     position: absolute;
 }
-//used in 3.loading_rectangles
-@mixin style_rectangle{
-    width: 20px;
-    height: 50px;
-    background-color: black;
-    margin-left: 5%;
-    float: left;
+
+//-----------ANIMATION-----------//
+
+/* 1.jumping_dots */
+@mixin jumping_dots_animation_mixin{
+    0%{
+        margin-top: 0px;
+    }
+    30%{
+        margin-top: -80px;
+    }
+    70%,100%{
+        margin-top: 0px;
+    }
 }
-//used in 6.loading_text
+/* 2.pulsing_dots */
+@mixin pulsing_dots_animation_mixin{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(2);
+    }
+}
+/* 3.loading_rectangles */
+@mixin loading_rectangles_animation_mixin{
+    0%{
+        transform: scaleY(1);
+    }
+    25%{
+        transform: scaleY(3);
+    }
+    50%,100%{
+        transform: scaleY(1);
+    }
+}
+/* 4.loading_circles */
+@mixin loading_circles_animation_mixin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* 5.loading_figures */
+@mixin figure1_animation_mixin{
+    0%{
+        width: 7vh;
+        height: 7vh;
+        border: 2px solid blue;
+    }
+    25%{
+        border: 2px solid red;
+        border-radius: 50%;
+        transform: rotate(90deg) scale(2);
+    }
+    50%{
+        width: 7vh;
+        height: 7vh;
+        border: 5px solid green;
+        border-radius: 50%;
+        transform: translate(100px,-50px);
+    }
+    75%{
+        border: 2px solid blue;
+        border-radius: 50%;
+        transform: translate(100px,0px);
+    }
+    100%{
+        width: 7vh;
+        height: 7vh;
+        border: 2px solid blue;
+    }
+}
+@mixin figure2_animation_mixin{
+    0%{
+        width: 7vh;
+        height: 7vh;
+        border: 2px solid blue;
+    }
+    25%{
+        border: 2px solid red;
+        border-radius: 50%;
+        transform: rotate(90deg) scale(2);
+    }
+    50%{
+        width: 7vh;
+        height: 7vh;
+        border: 5px solid yellow;
+        border-radius: 50%;
+        transform: translate(-100px,50px);
+    }
+    75%{
+        border: 2px solid blue;
+        border-radius: 50%;
+        transform: translate(-100px,0px);
+    }
+    100%{
+        width: 7vh;
+        height: 7vh;
+        border: 2px solid blue;
+    }
+}
+/* 6.loading_text */
 @mixin text_animation($time){
     animation: loading_text_animation 2s $time infinite alternate;
+    -moz-animation: loading_text_animation 2s $time infinite alternate;
+    -webkit-animation: loading_text_animation 2s $time infinite alternate;
+}
+@mixin loading_text_animation_mixin{
+    0%{
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100%{
+        opacity: 0;
+    }
 }

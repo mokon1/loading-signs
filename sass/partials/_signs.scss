@@ -1,13 +1,14 @@
 /* 1.jumping_dots */
 .jumping_dots_container{
- @include loading;
+    @include settingsOfContainer;
     align-items: center;
-    display: none; //to do few signs
+    justify-content: center;
+    display: none;
     .dot{
         width: 15px;
         height: 15px;
         border-radius: 50%;
-        background-color: black;
+        background-color: white;
         margin-left: 2%;
         float: left;
     }
@@ -15,32 +16,39 @@
 .jumping_dots_container div{
     &:first-child{
         animation: jumping_dots_animation 1s infinite ease-in-out;
+        -moz-animation: jumping_dots_animation 1s infinite ease-in-out;
+	    -webkit-animation: jumping_dots_animation 1s infinite ease-in-out;     
     }
-    &:nth-last-child(2){
+    &:nth-child(2){
         animation: jumping_dots_animation 1s 0.20s infinite ease-in-out;
+        -moz-animation: jumping_dots_animation 1s 0.20s infinite ease-in-out;
+	    -webkit-animation: jumping_dots_animation 1s 0.20s infinite ease-in-out;
     }
     &:last-child{
         animation: jumping_dots_animation 1s 0.40s infinite ease-in-out;
+        -moz-animation: jumping_dots_animation 1s 0.40s infinite ease-in-out;
+	    -webkit-animation: jumping_dots_animation 1s 0.40s infinite ease-in-out;
     }
 }
+
 @keyframes jumping_dots_animation{
-    0%{
-        margin-top: 0px;
-    }
-    30%{
-        margin-top: -80px;
-    }
-    70%,100%{
-        margin-top: 0px;
-    }
+    @include jumping_dots_animation_mixin;
+}
+
+@-moz-keyframes jumping_dots_animation{
+    @include jumping_dots_animation_mixin;
+}
+
+@-webkit-keyframes jumping_dots_animation{
+    @include jumping_dots_animation_mixin;
 }
 
 /* 2.pulsing_dots */
 .pulsing_dots_container{
-    @include loading;
+    @include settingsOfContainer;
     align-items: center;
     display: none;
-    div{
+    .pulsing_dot{
         width: 10px;
         height: 10px;
         margin-left: 25px;
@@ -48,97 +56,117 @@
         background-color: white;
         &:first-child{
             animation: pulsing_dots_animation 0.8s -0.40s infinite ease-in-out alternate;
+            -moz-animation: pulsing_dots_animation 0.8s -0.40s infinite ease-in-out alternate;
+            -webkit-animation: pulsing_dots_animation 0.8s -0.40s infinite ease-in-out alternate;
         }
-        &:nth-last-child(2){
+        &:nth-child(2){
             animation: pulsing_dots_animation 0.8s -0.2s infinite ease-in-out alternate;
+            -moz-animation: pulsing_dots_animation 0.8s -0.2s infinite ease-in-out alternate;
+            -webkit-animation: pulsing_dots_animation 0.8s -0.2s infinite ease-in-out alternate;
         }
         &:last-child{
             animation: pulsing_dots_animation 0.8s 0s infinite ease-in-out alternate;
+            -moz-animation: pulsing_dots_animation 0.8s 0s infinite ease-in-out alternate;
+            -webkit-animation: pulsing_dots_animation 0.8s 0s infinite ease-in-out alternate;
         }
     }
 }
 @keyframes pulsing_dots_animation{
-    0%{
-        transform: scale(0);
-    }
-    100%{
-        transform: scale(2);
-    }
+    @include pulsing_dots_animation_mixin;
+}
+@-moz-keyframes pulsing_dots_animation{
+    @include pulsing_dots_animation_mixin;
+}
+@-webkit-keyframes pulsing_dots_animation{
+    @include pulsing_dots_animation_mixin;
 }
 
 /* 3.loading_rectangles */
 .loading_rectangles_container{
-    @include loading;
+    @include settingsOfContainer;
     align-items: center;
     display: none;
     .rectangle{
-        @include style_rectangle;
+        width: 20px;
+        height: 50px;
+        background-color: white;
+        margin-left: 5%;
+        float: left;
     }
 }
 .loading_rectangles_container div{
     &:first-child {
-      animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out ;
+        animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out;
+        -moz-animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out;
+        -webkit-animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out;   
     }
     &:nth-child(2) {
-      animation: loading_rectangles_animation 1.6s 0.4s infinite ease-in-out;
+        animation: loading_rectangles_animation 1.6s 0.4s infinite ease-in-out;
+        -moz-animation: loading_rectangles_animation 1.6s 0.4s infinite ease-in-out;
+        -webkit-animation: loading_rectangles_animation 1.6s 0.4s infinite ease-in-out;    
     }
      &:nth-child(3) {
-      animation: loading_rectangles_animation 1.6s 0.6s infinite ease-in-out ;
+        animation: loading_rectangles_animation 1.6s 0.6s infinite ease-in-out;
+        -moz-animation: loading_rectangles_animation 1.6s 0.6s infinite ease-in-out;
+        -webkit-animation: loading_rectangles_animation 1.6s 0.6s infinite ease-in-out;    
     }
      &:nth-child(4) {
-      animation: loading_rectangles_animation 1.6s 0.8s infinite ease-in-out;
+        animation: loading_rectangles_animation 1.6s 0.8s infinite ease-in-out;
+        -moz-animation: loading_rectangles_animation 1.6s 0.8s infinite ease-in-out;
+        -webkit-animation: loading_rectangles_animation 1.6s 0.8s infinite ease-in-out;    
     }
     &:last-child{
-      animation: loading_rectangles_animation 1.6s 1.0s infinite ease-in-out;
+        animation: loading_rectangles_animation 1.6s 1.0s infinite ease-in-out;
+        -moz-animation: loading_rectangles_animation 1.6s 1.0s infinite ease-in-out;
+        -webkit-animation: loading_rectangles_animation 1.6s 1.0s infinite ease-in-out;    
     }
 }
 @keyframes loading_rectangles_animation{
-    0%{
-        transform: scaleY(1);
-    }
-    25%{
-        transform: scaleY(3);
-    }
-    50%,100%{
-        transform: scaleY(1);
-    }
+    @include loading_rectangles_animation_mixin;
+}
+@-moz-keyframes loading_rectangles_animation{
+    @include loading_rectangles_animation_mixin;
+}
+@-webkit-keyframes loading_rectangles_animation{
+    @include loading_rectangles_animation_mixin;
 }
 
 /* 4.loading_circles */
 .circles_container{
-    @include loading;
+    @include settingsOfContainer;
     align-items: center;
-    //background-color: white;
     display: none;
-    background-color: grey;
+    background-color: DimGray;
 }
 .circle_outside{
     width: 50px;
     height: 50px;
     border-top: 5px solid white;
     border-right: 5px solid white;
-    border-bottom: 5px solid grey;
+    border-bottom: 5px solid DimGray;
     border-left: 5px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    //position: relative;
     animation: loading_circles_animation 2s infinite linear;
+    -moz-animation: loading_circles_animation 2s infinite linear;
+    -webkit-animation: loading_circles_animation 2s infinite linear;
 }
 .circle_inside{
     width: 25px;
     height: 25px;
     border-top: 5px solid white;
-    border-right: 5px solid grey;
+    border-right: 5px solid DimGray;
     border-bottom: 5px solid white;
     border-left: 5px solid white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    //position: absolute;
     animation: circle-animation 3s infinite linear;
+    -moz-animation: circle-animation 3s infinite linear;
+    -webkit-animation: circle-animation 3s infinite linear;
 }
 .circle_dot{
     width: 5px;
@@ -148,100 +176,66 @@
     
 }
 @keyframes loading_circles_animation{
-    100%{
-        transform: rotate(360deg);
-    }
+    @include loading_circles_animation_mixin;
+}
+@-moz-keyframes loading_circles_animation{
+    @include loading_circles_animation_mixin;
+}
+@-webkit-keyframes loading_circles_animation{
+    @include loading_circles_animation_mixin;
 }
 
 /* 5.loading_figures */
 .loading_figures_container{
-     @include loading;
-   width:20vw;
-   // height: 20vh;
+    @include settingsOfContainer;
+    width:20vw;
     align-items: center;
     justify-content: space-around;
     display: none;
 }
-
 .figure1, .figure2{
     width: 7vh;
     height: 7vh;
     border: 2px solid blue;
     &:first-child{
         animation: figure1_animation 6s infinite linear;
+        -moz-animation: figure1_animation 6s infinite linear;
+        -webkit-animation: figure1_animation 6s infinite linear;
     }
     &:last-child{
         animation: figure2_animation 6s infinite linear;
+        -moz-animation: figure2_animation 6s infinite linear;
+        -webkit-animation: figure2_animation 6s infinite linear;
     }
 }
 @keyframes figure1_animation{
-    0%{
-        width: 7vh;
-        height: 7vh;
-        border: 2px solid blue;
-    }
-    25%{
-        border: 2px solid red;
-        border-radius: 50%;
-        transform: rotate(90deg) scale(2);
-    }
-    50%{
-        width: 7vh;
-        height: 7vh;
-        border: 5px solid green;
-        border-radius: 50%;
-        transform: translate(100px,-50px);
-    }
-    75%{
-        border: 2px solid blue;
-        border-radius: 50%;
-        transform: translate(100px,0px);
-    }
-    100%{
-        width: 7vh;
-        height: 7vh;
-        border: 2px solid blue;
-    }
+    @include figure1_animation_mixin;
 }
-    @keyframes figure2_animation{
-    0%{
-        width: 7vh;
-        height: 7vh;
-        border: 2px solid blue;
-    }
-    25%{
-        border: 2px solid red;
-        border-radius: 50%;
-        transform: rotate(90deg) scale(2);
-    }
-    50%{
-        width: 7vh;
-        height: 7vh;
-        border: 5px solid yellow;
-        border-radius: 50%;
-        transform: translate(-100px,50px);
-    }
-    75%{
-        border: 2px solid blue;
-        border-radius: 50%;
-        transform: translate(-100px,0px);
-    }
-    100%{
-        width: 7vh;
-        height: 7vh;
-        border: 2px solid blue;
-    }
+@-moz-keyframes figure1_animation{
+    @include figure1_animation_mixin;
+}
+@-webkit-keyframes figure1_animation{
+    @include figure1_animation_mixin;
+}
+@keyframes figure2_animation{
+    @include figure2_animation_mixin;
+}
+@-moz-keyframes figure2_animation{
+    @include figure2_animation_mixin;
+}
+@-webkit-keyframes figure2_animation{
+    @include figure2_animation_mixin;
 }
 
 /* 6.loading_text */
 .loading_text_container{
-    background-color:white;
-    @include loading;
+    background-color: #b30000;
+    @include settingsOfContainer;
     align-items: center;
     display: none;
     span{
         font-size: 40px;
-        color: red;
+        color: white;
         font-weight: 800px;
         margin-left: 5px;
     }
@@ -279,13 +273,12 @@
       @include text_animation(1.8s);
     }
 }
-
 @keyframes loading_text_animation{
-    0%{
-        opacity: 1;
-        transform: scale(1.5);
-    }
-    100%{
-        opacity: 0;
-    }
+   @include loading_text_animation_mixin;
+}
+@-moz-keyframes loading_text_animation{
+   @include loading_text_animation_mixin;
+}
+@-webkit-keyframes loading_text_animation{
+   @include loading_text_animation_mixin;
 }
