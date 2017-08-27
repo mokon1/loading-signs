@@ -1,5 +1,5 @@
 /* 1.jumping_dots */
-.jumping_dots_container{
+#jumping_dots_container{
     @include settingsOfContainer;
     align-items: center;
     justify-content: center;
@@ -13,7 +13,7 @@
         float: left;
     }
 }
-.jumping_dots_container div{
+#jumping_dots_container div{
     &:first-child{
         animation: jumping_dots_animation 1s infinite ease-in-out;
         -moz-animation: jumping_dots_animation 1s infinite ease-in-out;
@@ -44,7 +44,7 @@
 }
 
 /* 2.pulsing_dots */
-.pulsing_dots_container{
+#pulsing_dots_container{
     @include settingsOfContainer;
     align-items: center;
     display: none;
@@ -82,7 +82,7 @@
 }
 
 /* 3.loading_rectangles */
-.loading_rectangles_container{
+#loading_rectangles_container{
     @include settingsOfContainer;
     align-items: center;
     display: none;
@@ -94,7 +94,7 @@
         float: left;
     }
 }
-.loading_rectangles_container div{
+#loading_rectangles_container div{
     &:first-child {
         animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out;
         -moz-animation: loading_rectangles_animation 1.6s 0.2s infinite ease-in-out;
@@ -132,7 +132,7 @@
 }
 
 /* 4.loading_circles */
-.circles_container{
+#circles_container{
     @include settingsOfContainer;
     align-items: center;
     display: none;
@@ -186,7 +186,7 @@
 }
 
 /* 5.loading_figures */
-.loading_figures_container{
+#loading_figures_container{
     @include settingsOfContainer;
     width:20vw;
     align-items: center;
@@ -228,7 +228,7 @@
 }
 
 /* 6.loading_text */
-.loading_text_container{
+#loading_text_container{
     background-color: #b30000;
     @include settingsOfContainer;
     align-items: center;
@@ -241,7 +241,7 @@
     }
 }
 
-.loading_text_container span{
+#loading_text_container span{
     &:first-child {
       @include text_animation(0s);
     }
